@@ -62,6 +62,6 @@ final class PricingPlanList extends Component
         Gate::authorize('viewAny', PricingPlan::class);
         $teamId = data_get(auth()->user(), 'current_team_id') ?? data_get(auth()->user(), 'currentTeam.id');
 
-        return view('billing-pricing-livewire::plan-list', ['plans' => $query->execute($teamId === null ? null : (int) $teamId)]);
+        return view('module-billing-pricing-livewire::plan-list', ['plans' => $query->execute($teamId === null ? null : (int) $teamId)]);
     }
 }
