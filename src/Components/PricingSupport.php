@@ -78,7 +78,7 @@ final class PricingSupport extends Component
         Gate::authorize('viewAny', PricingSnapshot::class);
         $team = $this->team();
 
-        return view('billing-pricing-livewire::support', ['discounts' => PricingDiscount::query()->where('team_id', $team)->latest()->get(), 'snapshots' => PricingSnapshot::query()->where('team_id', $team)->latest()->get(), 'plans' => PricingPlan::query()->where('team_id', $team)->latest()->get()]);
+        return view('module-billing-pricing-livewire::support', ['discounts' => PricingDiscount::query()->where('team_id', $team)->latest()->get(), 'snapshots' => PricingSnapshot::query()->where('team_id', $team)->latest()->get(), 'plans' => PricingPlan::query()->where('team_id', $team)->latest()->get()]);
     }
 
     private function team(): int

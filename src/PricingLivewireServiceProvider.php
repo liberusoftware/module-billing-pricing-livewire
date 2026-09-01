@@ -13,8 +13,8 @@ final class PricingLivewireServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'billing-pricing-livewire');
-        Livewire::component('billing-pricing::plan-list', PricingPlanList::class);
-        Livewire::component('billing-pricing::support', PricingSupport::class);
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'module-billing-pricing-livewire');
+        Livewire::component('module-billing-pricing::plan-list', PricingPlanList::class);
+        Livewire::component('module-billing-pricing::support', PricingSupport::class);
     }
 }
